@@ -12,7 +12,7 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.find_element(By.XPATH,"//input[@type='search']").send_keys("ber")
 cartItems = driver.find_elements(By.XPATH,"//div[@class='product']")
 for item in cartItems:
-    item.find_element(By.XPATH,"div/button").click()   # here path linking tok place    # loop will run till depending on item number in cartItems
+    item.find_element(By.XPATH,"div/button").click()   # here path chaining of two path took place    # loop will run till depending on item number in cartItems
 driver.find_element(By.XPATH,"//img[@alt='Cart']").click()
 driver.find_element(By.XPATH,"//button[text()='PROCEED TO CHECKOUT']").click()
 # time.sleep(3)
