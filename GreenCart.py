@@ -18,7 +18,7 @@ driver.find_element(By.XPATH,"//button[text()='PROCEED TO CHECKOUT']").click()
 # time.sleep(3)
 driver.find_element(By.XPATH,"//input[@placeholder ='Enter promo code']").send_keys("rahulshettyacademy")
 driver.find_element(By.CSS_SELECTOR,".promoBtn").click()
-wait = WebDriverWait(driver, 10)
+wait = WebDriverWait(driver, 10)                              #here explicit wait is given with help of WebDriverWait class that takes driver and time as arguments
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR,".promoInfo")))
 driver.find_element(By.XPATH,"//button[text()='Place Order']").click()
 dropdown = Select(driver.find_element(By.XPATH,"//div/select"))
